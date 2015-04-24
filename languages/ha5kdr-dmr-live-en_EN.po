@@ -1,0 +1,32 @@
+msgid "Time"
+msgstr "Idő"
+
+msgid "Callsign"
+msgstr "Callsign"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "CallsignID"
+msgstr "DMR ID"
+
+msgid "Repeater"
+msgstr "Repeater"
+
+msgid "RepeaterID"
+msgstr "Repeater ID"
+
+msgid "Timeslot"
+msgstr "TS"
+
+msgid "Group"
+msgstr "Group"
+
+msgid "DTMF"
+msgstr "DTMF"
+
+msgid "City"
+msgstr "City"
+
+msgid "Country"
+msgstr "Country"

@@ -1,0 +1,32 @@
+msgid "Time"
+msgstr "Idő"
+
+msgid "Callsign"
+msgstr "Hívójel"
+
+msgid "Name"
+msgstr "Név"
+
+msgid "CallsignID"
+msgstr "DMR ID"
+
+msgid "Repeater"
+msgstr "Átjátszó"
+
+msgid "RepeaterID"
+msgstr "Átj. ID"
+
+msgid "Timeslot"
+msgstr "TS"
+
+msgid "Group"
+msgstr "TG"
+
+msgid "DTMF"
+msgstr "DTMF"
+
+msgid "City"
+msgstr "Város"
+
+msgid "Country"
+msgstr "Ország"
