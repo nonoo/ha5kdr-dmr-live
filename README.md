@@ -1,7 +1,9 @@
 ha5kdr-dmr-live
 ===============
 
-Wordpress plugin which shows the latest log of amateur radio Hytera DMR network communications.
+Wordpress plugin which displays a searchable, live amateur radio Hytera DMR network log table.
+Data is from http://ham-dmr.de/live_dmr
+
 Downloader & updater scripts also included (notice: they should not be run from the www-data folder!)
 
 #### Usage
