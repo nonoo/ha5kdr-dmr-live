@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: HA5KDR DMR Live Log
- * Plugin URI: https://github.com/nonoo/ha5kdr-dmr-live-wordpress-plugin
+ * Plugin URI: https://github.com/nonoo/ha5kdr-dmr-live
  * Description: Displays a searchable, live amateur radio Hytera DMR network log table. Data is from http://ham-dmr.de/live_dmr
  * Version: 1.0
  * Author: Nonoo
