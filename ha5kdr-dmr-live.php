@@ -33,8 +33,8 @@ function ha5kdr_dmr_live_generate() {
 	$out .= '				callsignid: { title: "' . __('CallsignID', 'ha5kdr-dmr-live') . '" },' . "\n";
 	$out .= '				repeater: { title: "' . __('Repeater', 'ha5kdr-dmr-live') . '" },' . "\n";
 	$out .= '				repeaterid: { title: "' . __('RepeaterID', 'ha5kdr-dmr-live') . '", visibility: "hidden" },' . "\n";
-	$out .= '				timeslot: { title: "' . __('Timeslot', 'ha5kdr-dmr-live') . '" },' . "\n";
-	$out .= '				group: { title: "' . __('Group', 'ha5kdr-dmr-live') . '" },' . "\n";
+	$out .= '				timeslot: { title: "' . __('Timeslot', 'ha5kdr-dmr-live') . '", width: "5%" },' . "\n";
+	$out .= '				group: { title: "' . __('Group', 'ha5kdr-dmr-live') . '", width: "7%" },' . "\n";
 	$out .= '				dtmf: { title: "' . __('DTMF', 'ha5kdr-dmr-live') . '", visibility: "hidden" },' . "\n";
 	$out .= '				city: { title: "' . __('City', 'ha5kdr-dmr-live') . '" },' . "\n";
 	$out .= '				country: { title: "' . __('Country', 'ha5kdr-dmr-live') . '" },' . "\n";
