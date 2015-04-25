@@ -1,3 +1,6 @@
+msgid "Search"
+msgstr "Search"
+
 msgid "Time"
 msgstr "Time (UTC)"
 

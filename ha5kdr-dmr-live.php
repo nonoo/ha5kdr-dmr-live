@@ -13,7 +13,7 @@ function ha5kdr_dmr_live_generate() {
 	$out = '<img id="ha5kdr-dmr-live-loader" src="' . plugins_url('loader.gif', __FILE__) . '" />' . "\n";
 	$out .= '<form id="ha5kdr-dmr-live-search">' . "\n";
 	$out .= '	<input type="text" id="ha5kdr-dmr-live-search-string" />' . "\n";
-	$out .= '	<input type="submit" id="ha5kdr-dmr-live-search-button" value="Keresés" />' . "\n";
+	$out .= '	<input type="submit" id="ha5kdr-dmr-live-search-button" value="' . __('Search', 'ha5kdr-dmr-live') . '" />' . "\n";
 	$out .= '</form>' . "\n";
 	$out .= '<div id="ha5kdr-dmr-live-container"></div>' . "\n";
 	$out .= '<script type="text/javascript">' . "\n";

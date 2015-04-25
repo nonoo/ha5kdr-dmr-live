@@ -1,3 +1,6 @@
+msgid "Search"
+msgstr "Keresés"
+
 msgid "Time"
 msgstr "Idő (UTC)"
 
