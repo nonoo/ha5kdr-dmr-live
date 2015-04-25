@@ -10,7 +10,8 @@
 */
 
 function ha5kdr_dmr_live_generate() {
-	$out = '<form id="ha5kdr-dmr-live-search">' . "\n";
+	$out = '<img id="ha5kdr-dmr-live-loader" src="' . plugins_url('loader.gif', __FILE__) . '" />' . "\n";
+	$out .= '<form id="ha5kdr-dmr-live-search">' . "\n";
 	$out .= '	<input type="text" id="ha5kdr-dmr-live-search-string" />' . "\n";
 	$out .= '	<input type="submit" id="ha5kdr-dmr-live-search-button" value="Keresés" />' . "\n";
 	$out .= '</form>' . "\n";
@@ -39,17 +40,24 @@ function ha5kdr_dmr_live_generate() {
 	$out .= '				country: { title: "' . __('Country', 'ha5kdr-dmr-live') . '" },' . "\n";
 	$out .= '			}' . "\n";
 	$out .= '		});' . "\n";
+	$out .= '		function dmr_live_update_showloader() {' . "\n";
+	$out .= '			$("#ha5kdr-dmr-live-loader").fadeIn();' . "\n";
+	$out .= '		}' . "\n";
+	$out .= '		function dmr_live_update_hideloader() {' . "\n";
+	$out .= '			$("#ha5kdr-dmr-live-loader").fadeOut();' . "\n";
+	$out .= '		}' . "\n";
 	$out .= '		function dmr_live_update() {' . "\n";
 	$out .= '			$("#ha5kdr-dmr-live-container").jtable("load", {' . "\n";
 	$out .= '				searchfor: dmr_live_searchfor' . "\n";
-	$out .= '			});' . "\n";
+	$out .= '			}, dmr_live_update_hideloader);' . "\n";
 	$out .= '		};' . "\n";
 	$out .= '		$("#ha5kdr-dmr-live-search-button").click(function (e) {' . "\n";
 	$out .= '			e.preventDefault();' . "\n";
+	$out .= '			dmr_live_update_showloader();' . "\n";
 	$out .= '			dmr_live_searchfor = $("#ha5kdr-dmr-live-search-string").val();' . "\n";
 	$out .= '			dmr_live_update();' . "\n";
 	$out .= '		});' . "\n";
-	$out .= '		setInterval(function() { $("#ha5kdr-dmr-live-container").jtable("reload"); }, 5000);' . "\n";
+	$out .= '		setInterval(function() { dmr_live_update_showloader(); $("#ha5kdr-dmr-live-container").jtable("reload", dmr_live_update_hideloader); }, 5000);' . "\n";
 	$out .= '		dmr_live_update();' . "\n";
 	$out .= '	});' . "\n";
 	$out .= '</script>' . "\n";

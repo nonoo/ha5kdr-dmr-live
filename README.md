@@ -13,6 +13,7 @@ Edit and rename **ha5kdr-dmr-live-config-example.inc.php** to **ha5kdr-dmr-live-
 Wordpress plugin configuration page. Add **ha5kdr-dmr-live-update-check.sh** to crontab and make it run
 every minute. This will start one instance of the **ha5kdr-dmr-live-update.sh** script which runs
 **ha5kdr-dmr-live-process.php** every 5 seconds, so the database will be updated every 5 seconds.
+Copy **loader-example.gif** to **loader.gif**.
 
 To show the live log, insert this to a Wordpress page or post:
 
