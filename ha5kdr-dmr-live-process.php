@@ -11,13 +11,13 @@
 		return 1;
 	}
 
-	$conn = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+	$conn = mysql_connect(DMR_LIVE_DB_HOST, DMR_LIVE_DB_USER, DMR_LIVE_DB_PASSWORD);
 	if (!$conn) {
 		echo "can't connect to mysql database!\n";
 		return 1;
 	}
 
-	$db = mysql_select_db(DB_NAME, $conn);
+	$db = mysql_select_db(DMR_LIVE_DB_NAME, $conn);
 	if (!$db) {
 		mysql_close($conn);
 		echo "can't connect to mysql database!\n";
@@ -28,7 +28,7 @@
 	mysql_query("set charset 'utf8'");
 
 	// Deleting old entries.
-	mysql_query('delete from `' . DB_TABLE . '` where unix_timestamp(`date`) < (UNIX_TIMESTAMP() - ' . DB_CLEAR_OLDER_THAN_SECONDS . ')');
+	mysql_query('delete from `' . DMR_LIVE_DB_TABLE . '` where unix_timestamp(`date`) < (UNIX_TIMESTAMP() - ' . DMR_LIVE_DB_CLEAR_OLDER_THAN_SECONDS . ')');
 
 	$rows = explode("\n", $dmrdata);
 
@@ -49,7 +49,7 @@
 		$city = trim(substr($row, 122, 20));
 		$country = trim(substr($row, 142));
 
-		mysql_query('replace into `' . DB_TABLE . '` ' .
+		mysql_query('replace into `' . DMR_LIVE_DB_TABLE . '` ' .
 			'(`date`, `callsign`, `repeater`, `repeaterid`, `callsignid`, ' .
 			'`timeslot`, `group`, `name`, `dtmf`, `city`, `country`) values (' .
 			'from_unixtime(' . $date . '), ' .

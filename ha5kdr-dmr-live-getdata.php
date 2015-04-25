@@ -8,13 +8,13 @@
 
 	include('ha5kdr-dmr-live-config.inc.php');
 
-	$conn = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+	$conn = mysql_connect(DMR_LIVE_DB_HOST, DMR_LIVE_DB_USER, DMR_LIVE_DB_PASSWORD);
 	if (!$conn) {
 		echo "can't connect to mysql database!\n";
 		return;
 	}
 
-	$db = mysql_select_db(DB_NAME, $conn);
+	$db = mysql_select_db(DMR_LIVE_DB_NAME, $conn);
 	if (!$db) {
 		mysql_close($conn);
 		echo "can't connect to mysql database!\n";
@@ -55,11 +55,11 @@
 		return;
 
 	// Getting record count
-	$result = mysql_query('select count(*) as `recordcount` from `' . DB_TABLE . '` ' . $search);
+	$result = mysql_query('select count(*) as `recordcount` from `' . DMR_LIVE_DB_TABLE . '` ' . $search);
 	$row = mysql_fetch_array($result);
 	$recordcount = $row['recordcount'];
 
-	$result = mysql_query('select *, unix_timestamp(`date`) as `ts` from `' . DB_TABLE . '` ' . $search . 'order by ' . mysql_real_escape_string($sorting) .
+	$result = mysql_query('select *, unix_timestamp(`date`) as `ts` from `' . DMR_LIVE_DB_TABLE . '` ' . $search . 'order by ' . mysql_real_escape_string($sorting) .
 		' limit ' . mysql_real_escape_string($startindex) . ',' . mysql_real_escape_string($pagesize));
 	$rows = array();
 	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
