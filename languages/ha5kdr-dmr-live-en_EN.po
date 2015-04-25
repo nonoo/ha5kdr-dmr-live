@@ -1,5 +1,5 @@
 msgid "Time"
-msgstr "Idő"
+msgstr "Time (UTC)"
 
 msgid "Callsign"
 msgstr "Callsign"

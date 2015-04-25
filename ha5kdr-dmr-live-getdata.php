@@ -59,11 +59,13 @@
 	$row = mysql_fetch_array($result);
 	$recordcount = $row['recordcount'];
 
-	$result = mysql_query('select * from `' . DB_TABLE . '` ' . $search . 'order by ' . mysql_real_escape_string($sorting) .
+	$result = mysql_query('select *, unix_timestamp(`date`) as `ts` from `' . DB_TABLE . '` ' . $search . 'order by ' . mysql_real_escape_string($sorting) .
 		' limit ' . mysql_real_escape_string($startindex) . ',' . mysql_real_escape_string($pagesize));
 	$rows = array();
-	while ($row = mysql_fetch_array($result, MYSQL_ASSOC))
+	while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
+		$row['date'] = date('H:i:s', $row['ts']);
 	    $rows[] = $row;
+	}
 
 	$jtableresult = array();
 	$jtableresult['Result'] = "OK";
