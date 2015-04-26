@@ -27,6 +27,10 @@
 	padding: 0;
 }
 
+#ha5kdr-dmr-live-container .jtable .country {
+	text-align: center;
+}
+
 #ha5kdr-dmr-live-container .jtable-row-even {
 	background-color: #292929;
 }
