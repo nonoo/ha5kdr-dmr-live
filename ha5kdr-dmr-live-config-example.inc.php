@@ -6,4 +6,5 @@
 	define('DMR_LIVE_DB_TABLE',						'dmr-live');
 	define('DMR_LIVE_DB_CLEAR_OLDER_THAN_SECONDS',	3600);
 	define('DMR_LIVE_DATA_URL',						'http://ham-dmr.de/live_dmr/jj3.yaws');
+	define('DMR_LIVE_FLAGS_URL',					'http://ham-dmr.nonoo.hu/wp-content/themes/ham-dmr/images/flags/');
 ?>

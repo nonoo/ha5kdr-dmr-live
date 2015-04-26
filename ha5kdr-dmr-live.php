@@ -9,6 +9,8 @@
  * License: MIT
 */
 
+include_once(dirname(__FILE__) . '/ha5kdr-dmr-live-config.inc.php');
+
 function ha5kdr_dmr_live_generate() {
 	$out = '<img id="ha5kdr-dmr-live-loader" src="' . plugins_url('loader.gif', __FILE__) . '" />' . "\n";
 	$out .= '<form id="ha5kdr-dmr-live-search">' . "\n";
@@ -37,7 +39,9 @@ function ha5kdr_dmr_live_generate() {
 	$out .= '				group: { title: "' . __('Group', 'ha5kdr-dmr-live') . '", width: "7%" },' . "\n";
 	$out .= '				dtmf: { title: "' . __('DTMF', 'ha5kdr-dmr-live') . '", visibility: "hidden" },' . "\n";
 	$out .= '				city: { title: "' . __('City', 'ha5kdr-dmr-live') . '" },' . "\n";
-	$out .= '				country: { title: "' . __('Country', 'ha5kdr-dmr-live') . '" },' . "\n";
+	$out .= '				country: { title: "' . __('Country', 'ha5kdr-dmr-live') . '", display: function (data) {' . "\n";
+	$out .= '					return "<img title=\"" + data.record.country + "\" src=\"' . DMR_LIVE_FLAGS_URL . '" + data.record.country.replace(" ", "_") + ".png\" />";' . "\n";
+	$out .= '				}, width: "1%", listClass: "country" }' . "\n";
 	$out .= '			}' . "\n";
 	$out .= '		});' . "\n";
 	$out .= '		function dmr_live_update_showloader() {' . "\n";
