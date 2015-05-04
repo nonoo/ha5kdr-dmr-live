@@ -40,7 +40,8 @@ function ha5kdr_dmr_live_generate() {
 	$out .= '				dtmf: { title: "' . __('DTMF', 'ha5kdr-dmr-live') . '", visibility: "hidden" },' . "\n";
 	$out .= '				city: { title: "' . __('City', 'ha5kdr-dmr-live') . '" },' . "\n";
 	$out .= '				country: { title: "' . __('Country', 'ha5kdr-dmr-live') . '", display: function (data) {' . "\n";
-	$out .= '					return "<img title=\"" + data.record.country + "\" src=\"' . DMR_LIVE_FLAGS_URL . '" + data.record.country.replace(" ", "_").replace("/", "_") + ".png\" />";' . "\n";
+	$out .= '					if (data.record.country != "")' . "\n";
+	$out .= '						return "<img title=\"" + data.record.country + "\" src=\"' . DMR_LIVE_FLAGS_URL . '" + data.record.country.replace(" ", "_").replace("/", "_") + ".png\" />";' . "\n";
 	$out .= '				}, width: "1%", listClass: "country" }' . "\n";
 	$out .= '			}' . "\n";
 	$out .= '		});' . "\n";
