@@ -23,4 +23,4 @@ To show the live log, insert this to a Wordpress page or post:
 <ha5kdr-dmr-live />
 ```
 
-You can see a working example [here](http://www.ha5kdr.hu/projektek/dmr/status).
+You can see a working example [here](http://ham-dmr.hu/elo-statusz/).
